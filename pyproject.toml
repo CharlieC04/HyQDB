@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hyqagent"
+version = "0.1.0"
+description = "A Tool-Augmented ReAct LLM Framework for Debugging Hybrid Quantum Scripts"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Charlie Campbell", email = "cc2722@ic.ac.uk"}
+]
+dependencies = [
+    "pennylane>=0.35.0",
+    "pennylane-qiskit>=0.35.0",
+    "qiskit-aer>=0.13.0",
+    "qiskit-ibm-runtime>=0.22.0",
+    "torch>=2.0.0",
+    "jax==0.11.1",       
+    "jaxlib==0.11.1",
+    "optax>=0.1.7",
+    "groq>=0.4.2"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0"
+]
